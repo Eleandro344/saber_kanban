@@ -1,0 +1,30 @@
+.custom-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00b5cc;
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Unbounded', sans-serif;
+    z-index: 999;
+  }
+  
+  
+  .custom-header img {
+    max-width: 250px;
+    height: auto;
+  }
+  
+  .header-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 2px;
+  }
+  
