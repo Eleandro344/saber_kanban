@@ -102,4 +102,10 @@
     transition: transform 0.5s;
     transform: rotate(360deg);
   }
+  .logout-button {
+    position: fixed;
+    top: 20px;
+    left: 1700px;
+    z-index: 999;
+  }
   
