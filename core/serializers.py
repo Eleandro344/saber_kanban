@@ -8,3 +8,11 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['email'] = user.email
         token['first_name'] = user.first_name
         return token
+    
+from rest_framework import serializers
+from .models import Quadro
+
+class QuadroSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Quadro
+        fields = '__all__'
