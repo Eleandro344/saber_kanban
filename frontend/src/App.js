@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Logout from './pages/Logout';
 import PrivateRoute from './routes/PrivateRoute';
 import Kanban from './pages/Kanban';
+import Tarefas from './pages/Tarefas';
 
 
 
@@ -14,7 +15,7 @@ const LayoutWrapper = ({ children }) => {
   const location = useLocation();
 
   // Header só aparece nas rotas que não estiverem aqui
-  const hideHeaderRoutes = ['/login', '/kanban'];
+  const hideHeaderRoutes = ['/login', '/kanban', '/tarefas'];
   const isHeaderHidden = hideHeaderRoutes.includes(location.pathname);
 
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/kanban" element={<Kanban />} />
+          <Route path="/tarefas" element={<Tarefas />} />
 
           {/* Adicione outras rotas privadas aqui */}
           </Route>

@@ -1,0 +1,31 @@
+.kanban-container {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    overflow-x: auto;
+  }
+  
+  .kanban-col {
+    background: #f1f1f1;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+  }
+  
+  .kanban-header {
+    font-weight: bold;
+    background: #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .kanban-card {
+    background: white;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  

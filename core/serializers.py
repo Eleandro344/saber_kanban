@@ -16,3 +16,11 @@ class QuadroSerializer(serializers.ModelSerializer):
     class Meta:
         model = Quadro
         fields = '__all__'
+
+# core/serializers.py
+from .models import Quadro, Tarefa
+
+class TarefaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tarefa
+        fields = '__all__'

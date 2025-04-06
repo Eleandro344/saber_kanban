@@ -33,10 +33,10 @@ const Sidebar = () => {
           <i className="fas fa-home me-2 fa-lg"></i>
           <span className="sidebar-info">Home</span>
           </Link>
-          {/* <Link to="/kanban" className={`nav-link nav-link-beat ${location.pathname === '/Kanban' ? 'active' : ''}`}>
+          <Link to="/kanban" className={`nav-link nav-link-beat ${location.pathname === '/Kanban' ? 'active' : ''}`}>
           <i className="fas fa-calendar-alt me-2 fa-lg"></i>
           <span className="sidebar-info">Kanban</span>
-          </Link> */}
+          </Link>
       </nav>
     </div>
   );

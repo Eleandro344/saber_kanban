@@ -7,13 +7,14 @@ const Kanban = () => {
     nome: '',
     responsavel: '',
     ativo: true,
+    situacao: 'PROJETO NA FILA'
   });
 
   const token = localStorage.getItem('access');
 
   useEffect(() => {
     if (!token) return;
-  
+
     fetch('http://localhost:8000/api/quadros/', {
       headers: {
         Authorization: `Bearer ${token}`
@@ -21,7 +22,6 @@ const Kanban = () => {
     })
       .then(res => res.json())
       .then(data => {
-        console.log('API Response:', data);
         if (Array.isArray(data)) {
           setQuadros(data);
         } else if (Array.isArray(data.results)) {
@@ -35,7 +35,6 @@ const Kanban = () => {
         setQuadros([]);
       });
   }, [token]);
-  
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -59,7 +58,7 @@ const Kanban = () => {
       .then(res => res.json())
       .then(data => {
         setQuadros(prev => [...prev, data]);
-        setNovoQuadro({ nome: '', responsavel: '', ativo: true });
+        setNovoQuadro({ nome: '', responsavel: '', ativo: true, situacao: 'PROJETO NA FILA' });
       });
   };
 
@@ -70,7 +69,7 @@ const Kanban = () => {
       {/* Formulário */}
       <form onSubmit={handleSubmit} className="mb-4">
         <div className="row g-2">
-          <div className="col-md-4">
+          <div className="col-md-3">
             <input
               type="text"
               name="nome"
@@ -81,7 +80,7 @@ const Kanban = () => {
               required
             />
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <input
               type="text"
               name="responsavel"
@@ -92,7 +91,22 @@ const Kanban = () => {
               required
             />
           </div>
-          <div className="col-md-2 d-flex align-items-center">
+          <div className="col-md-3">
+            <select
+              name="situacao"
+              className="form-select"
+              value={novoQuadro.situacao}
+              onChange={handleChange}
+            >
+              <option value="PROJETO NA FILA">PROJETO NA FILA</option>
+              <option value="EM NEGOCIAÇÃO">EM NEGOCIAÇÃO</option>
+              <option value="EXECUÇÃO DO TIME">EXECUÇÃO DO TIME</option>
+              <option value="APRESENTAÇÃO AO CLIENTE">APRESENTAÇÃO AO CLIENTE</option>
+              <option value="VALORES">VALORES</option>
+              <option value="ENTREGA AO CLIENTE">ENTREGA AO CLIENTE</option>
+            </select>
+          </div>
+          <div className="col-md-1 d-flex align-items-center">
             <label className="form-check-label me-2">Ativo:</label>
             <input
               type="checkbox"
@@ -115,6 +129,7 @@ const Kanban = () => {
             <th>Nome do quadro</th>
             <th>Responsável</th>
             <th>Status</th>
+            <th>Situação</th>
           </tr>
         </thead>
         <tbody>
@@ -128,11 +143,12 @@ const Kanban = () => {
                     {quadro.ativo ? 'Ativo' : 'Inativo'}
                   </span>
                 </td>
+                <td>{quadro.situacao}</td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan="3">Nenhum quadro disponível.</td>
+              <td colSpan="4">Nenhum quadro disponível.</td>
             </tr>
           )}
         </tbody>
@@ -142,4 +158,3 @@ const Kanban = () => {
 };
 
 export default Kanban;
-localStorage.getItem('access')
