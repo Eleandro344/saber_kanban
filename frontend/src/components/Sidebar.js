@@ -33,8 +33,9 @@ const Sidebar = () => {
           <i className="fas fa-home me-2 fa-lg"></i>
           <span className="sidebar-info">Home</span>
           </Link>
-          <Link to="/kanban" className={`nav-link nav-link-beat ${location.pathname === '/Kanban' ? 'active' : ''}`}>
-          <i className="fas fa-calendar-alt me-2 fa-lg"></i>
+          <Link to="/kanban" className={`nav-link nav-link-beat ${location.pathname === '/kanban' ? 'active' : ''}`}>
+          <i className="fas fa-th-large me-2 fa-lg"></i>
+
           <span className="sidebar-info">Kanban</span>
           </Link>
       </nav>

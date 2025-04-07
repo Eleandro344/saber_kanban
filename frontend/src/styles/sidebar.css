@@ -83,7 +83,7 @@
   bottom: 0;
   width: 6rem;
   padding: 2rem 1rem;
-  background-color: #00b5cc;
+  background-color: #0c6e9f;
   z-index: 1050;
   transition: width 0.3s ease-in-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 1.2);
@@ -121,7 +121,9 @@ html {
 }
 .sidebar .nav-link i {
   width: 2rem;
+  color: white; /* força o ícone a ser branco */
 }
+
 .sidebar .nav-link span {
   visibility: hidden;
   opacity: 1;
@@ -158,8 +160,8 @@ html {
   border-radius: 5px; /* Adicionar bordas arredondadas para destacar */
 }
 
-.nav-link.active i {
-  color: white; /* Cor do ícone quando o link está ativo */
+.sidebar .nav-link i {
+  color: white !important;
 }
 
 .content {

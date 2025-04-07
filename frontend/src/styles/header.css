@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #00b5cc;
+    background-color: #0c6e9f;
     padding: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -22,9 +22,13 @@
   
   .header-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
     color: #fff;
     margin-top: 2px;
+  }
+  .custom-header img {
+    max-height: 40px; /* ou o tamanho que quiser, ex: 40px, 60px */
+    width: auto;
   }
   

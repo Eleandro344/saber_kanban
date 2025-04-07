@@ -11,11 +11,12 @@ class Quadro(models.Model):
         ('VALORES', 'VALORES'),
         ('ENTREGA AO CLIENTE', 'ENTREGA AO CLIENTE'),
     ]
-
+    empresa = models.CharField(max_length=100, blank=True, null=True)
     nome = models.CharField(max_length=100)
     responsavel = models.CharField(max_length=100)
     ativo = models.BooleanField(default=True)
     situacao = models.CharField(max_length=50, choices=SITUACOES, default='PROJETO NA FILA')
+    criado_em = models.DateTimeField(auto_now_add=True)  # <- Aqui
 
     def __str__(self):
         return self.nome

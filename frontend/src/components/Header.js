@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="custom-header text-center">
       <img src={logo} alt="Logo" className="img-fluid" />
-      <p className="header-text">Saber Comece</p>
+      <p className="header-text">Saber AFL</p>
     </header>
   );
 };
