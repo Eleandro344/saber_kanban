@@ -29,7 +29,7 @@ const Sidebar = () => {
       <hr />
       <p className="welcome-text">Bem-vindo, {username}!</p>
       <nav className="nav flex-column">
-        <Link to="/" className={`nav-link nav-link-beat ${location.pathname === '/' ? 'active' : ''}`}>
+        <Link to="/home" className={`nav-link nav-link-beat ${location.pathname === '/home' ? 'active' : ''}`}>
           <i className="fas fa-home me-2 fa-lg"></i>
           <span className="sidebar-info">Home</span>
           </Link>

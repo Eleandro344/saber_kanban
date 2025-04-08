@@ -22,7 +22,7 @@ const Login = () => {
     if (res.ok) {
       localStorage.setItem('access', data.access);
       localStorage.setItem('refresh', data.refresh);
-      navigate('/');
+      navigate('/home');
     } else {
       setErro('Email ou senha inválidos');
     }

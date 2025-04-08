@@ -16,7 +16,7 @@
   
   
   .custom-header img {
-    max-width: 250px;
+    max-width: 9000px;
     height: auto;
   }
   
@@ -28,7 +28,7 @@
     margin-top: 2px;
   }
   .custom-header img {
-    max-height: 40px; /* ou o tamanho que quiser, ex: 40px, 60px */
+    max-height: 60px; /* ou o tamanho que quiser, ex: 40px, 60px */
     width: auto;
   }
   

@@ -1,111 +1,86 @@
-/* Isto cria uma barra lateral estreita fixada à esquerda da página */
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
-/* Estilos para dispositivos de tela pequena */
-@media only screen and (max-width: 600px) {
-    /* Adapte o layout para telas pequenas aqui */
-  }
-  
-  /* Estilos para dispositivos de tela média */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Adapte o layout para telas médias aqui */
-  }
-  
-  /* Estilos para dispositivos de tela grande */
-  @media only screen and (min-width: 1025px) {
-    /* Adapte o layout para telas grandes aqui */
-  }
-/* Isto cria uma barra lateral estreita fixada à esquerda da página */
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
-/* Estilos para dispositivos de tela pequena */
-@media only screen and (max-width: 600px) {
-    /* Adapte o layout para telas pequenas aqui */
-  }
-  
-  /* Estilos para dispositivos de tela média */
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Adapte o layout para telas médias aqui */
-  }
-  
-  /* Estilos para dispositivos de tela grande */
-  @media only screen and (min-width: 1025px) {
-    /* Adapte o layout para telas grandes aqui */
-  }
-  :root {
-    --color-primary: #269fe6;
-    --color-primary-hover: #2086c2;
-    --color-primary-dark: #13141f;
-    --color-primary-dark-hover: #212336;
-    --color-primary-light: #d4ecfa;
-    --color-primary-light-hover: #bdd8e7;
-    --color-white: #fff;
-    --color-black: #000;
-    --color-dark-text: #444;
-    --color-info-light: #cce5ff;
-    --color-debug-light: #cce5ff;
-    --color-success-light: #d4edda;
-    --color-alert-light: #fff3cd;
-    --color-warning-light: #fff3cd;
-    --color-error-light: #f8d7da;
-    --color-info-dark: #4d86c4;
-    --color-debug-dark: #4d86c4;
-    --color-success-dark: #4a9c5d;
-    --color-alert-dark: #927f40;
-    --color-warning-dark: #927f40;
-    --color-error-dark: #da525d;
-    --color-gray-0: #f9f9f9;
-    --color-gray-1: #e0e0e0;
-    --color-gray-2: #c7c7c7;
-    --color-gray-3: #aeaeae;
-    --color-gray-4: #959595;
-    --color-gray-5: #7d7d7d;
-    --color-gray-6: #646464;
-    --color-gray-7: #4b4b4b;
-    --color-gray-8: #323232;
-    --color-gray-9: #191919;
-    --font-primary: sans-serif;
-    --font-headings: 'Roboto Slab', serif;
-    --spacing-gutter-medium: 3rem;
-    --spacing-gutter-large: 4rem;
-  }
 
-  /*muda a fonte do menu*/
-  /*muda a fonte do menu*/
+:root {
+  --color-primary: #269fe6;
+  --color-primary-hover: #2086c2;
+  --color-primary-dark: #13141f;
+  --color-primary-dark-hover: #212336;
+  --color-primary-light: #d4ecfa;
+  --color-primary-light-hover: #bdd8e7;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark-text: #444;
+  --color-info-light: #cce5ff;
+  --color-success-light: #d4edda;
+  --color-alert-light: #fff3cd;
+  --color-error-light: #f8d7da;
+  --color-info-dark: #4d86c4;
+  --color-success-dark: #4a9c5d;
+  --color-warning-dark: #927f40;
+  --color-error-dark: #da525d;
+  --color-gray-0: #f9f9f9;
+  --color-gray-1: #e0e0e0;
+  --color-gray-2: #c7c7c7;
+  --color-gray-3: #aeaeae;
+  --color-gray-4: #959595;
+  --color-gray-5: #7d7d7d;
+  --color-gray-6: #646464;
+  --color-gray-7: #4b4b4b;
+  --color-gray-8: #323232;
+  --color-gray-9: #191919;
+  --font-primary: 'Poppins', sans-serif;
+  --font-headings: 'Roboto Slab', serif;
+}
+
+html {
+  zoom: 0.75;
+  font-family: var(--font-primary);
+}
 
 .animation3 {
-    width: 400px;
-    height: 500px;
-    border: none;
-    margin-top: -130px;
-  }
-  
-  .custom-button {
-    margin-top: 8px;
-    background-color: rgb(38, 170, 71);
-    color: black;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    border: 3px solid transparent;
-    padding: 12px 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    transition: all 300ms;
-    margin-left: -100px;
+  width: 400px;
+  height: 500px;
+  border: none;
+  margin-top: -130px;
+}
 
+.custom-button {
+  margin-top: 8px;
+  background-color: rgb(38, 170, 71);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  border: 3px solid transparent;
+  padding: 12px 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 300ms ease;
+  margin-left: -100px;
+}
+
+/* hover estilizado com mais especificidade */
+.btn.custom-button:hover {
+  background-color: #0d6efd;
+  color: white;
+  transform: scale(1.08);
+  border-color: #0a58ca;
+}
+
+.rotate {
+  transition: transform 0.5s;
+  transform: rotate(360deg);
+}
+
+.logout-button {
+  position: fixed;
+  top: 20px;
+  left: 1700px;
+  z-index: 999;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 600px) {
+  .custom-button {
+    width: 100%;
+    margin-left: 0;
   }
-  
-  .custom-button:hover {
-    background-color: darkturquoise;
-    color: white;
-    transform: scale(1.05);
-  }
-  
-  .rotate {
-    transition: transform 0.5s;
-    transform: rotate(360deg);
-  }
-  .logout-button {
-    position: fixed;
-    top: 20px;
-    left: 1700px;
-    z-index: 999;
-  }
-  
+}

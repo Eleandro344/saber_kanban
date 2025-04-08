@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -11,7 +11,6 @@ import Tarefas from './pages/Tarefas';
 
 const LayoutWrapper = ({ children }) => {
   const location = useLocation();
-
   const hideHeaderRoutes = ['/login', '/kanban', '/tarefas'];
   const isHeaderHidden = hideHeaderRoutes.includes(location.pathname);
 
@@ -54,10 +53,10 @@ function App() {
     <Router>
       <LayoutWrapper>
         <Routes>
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route element={<PrivateRoute />}>
-            <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/kanban" element={<Kanban />} />
             <Route path="/tarefas" element={<Tarefas />} />

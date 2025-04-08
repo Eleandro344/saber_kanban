@@ -52,14 +52,16 @@ const Home = () => {
       </div>
 
       <div className="d-flex justify-content-center mb-5">
-        <button
-          id="rotateButton"
-          className="btn custom-button btn-lg active"
-          onClick={() => navigate('/home')}
-        >
-          Continuar para o menu principal
-        </button>
+      <button
+  id="rotateButton"
+  className="btn custom-button btn-lg active"
+  onClick={() => navigate('/tarefas')}
+>
+  Continuar para o menu principal
+</button>
+
       </div>
+
 
       <Footer />
     </div>
