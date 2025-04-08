@@ -1,5 +1,7 @@
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
+from .models import Quadro, Tarefa
+from rest_framework import serializers
+from .models import Quadro
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
@@ -9,8 +11,7 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['first_name'] = user.first_name
         return token
     
-from rest_framework import serializers
-from .models import Quadro
+
 
 class QuadroSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,7 +19,6 @@ class QuadroSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 # core/serializers.py
-from .models import Quadro, Tarefa
 
 class TarefaSerializer(serializers.ModelSerializer):
     class Meta:

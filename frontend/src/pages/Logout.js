@@ -10,7 +10,7 @@ const Logout = () => {
     navigate('/login');
   }, [navigate]);
 
-  return null; // não precisa mostrar nada
+  return null; 
 };
 
 export default Logout;

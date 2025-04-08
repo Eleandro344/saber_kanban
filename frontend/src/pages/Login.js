@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/logocomece.svg'; // ajuste o caminho conforme sua estrutura
+import logo from '../assets/logocomece.svg';
 
 const Login = () => {
   const [email, setEmail] = useState('');

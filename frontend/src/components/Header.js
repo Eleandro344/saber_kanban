@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/header.css';
-import logo from '../assets/logocomece.svg'; // Certifique-se de que o logo está na pasta certa
+import logo from '../assets/logocomece.svg';
 
 const Header = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
-import '../styles/main.css'; // CSS global com .content e variáveis
+import '../styles/main.css'; 
 
 const MainLayout = ({ children }) => {
   return (

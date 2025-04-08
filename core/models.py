@@ -16,7 +16,7 @@ class Quadro(models.Model):
     responsavel = models.CharField(max_length=100)
     ativo = models.BooleanField(default=True)
     situacao = models.CharField(max_length=50, choices=SITUACOES, default='PROJETO NA FILA')
-    criado_em = models.DateTimeField(auto_now_add=True)  # <- Aqui
+    criado_em = models.DateTimeField(auto_now_add=True)  
 
     def __str__(self):
         return self.nome
